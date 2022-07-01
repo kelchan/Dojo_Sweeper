@@ -8,7 +8,7 @@ var theDojo = [ [1, 0, 1, 1, 1, 0, 4, 0, 8, 0],
                 [2, 2, 2, 2, 0, 7, 1, 1, 1, 0],
                 [5, 2, 0, 2, 0, 0, 0, 1, 1, 2],
                 [9, 2, 2, 2, 0, 7, 0, 1, 1, 0] ];
-var randomDojo = [ [1, 0, 1, 1, 1, 0, 4, 0, 8, 0],
+var randomD = [ [1, 0, 1, 1, 1, 0, 4, 0, 8, 0],
                 [3, 1, 0, 7, 0, 0, 6, 0, 8, 8],
                 [5, 0, 7, 0, 3, 6, 6, 6, 0, 0],
                 [2, 3, 0, 9, 0, 0, 6, 0, 8, 0],
@@ -25,7 +25,7 @@ let numOf0 = 0; //41
 //GENERATE RANDOM MAP
 for(let x = 0; x < theDojo.length; x++) {
     for(let y = 0; y < theDojo[x].length; y++) {
-        randomDojo[x][y] = Math.floor(Math.random() * 10);
+        randomD[x][y] = Math.floor(Math.random() * 10);
     }
 }
 
@@ -114,8 +114,9 @@ function verify(x, y) {
 // start the game
 // message to greet a user of the game
 var style="color:cyan;font-size:1.5rem;font-weight:bold;";
-console.log("%c" + "IF YOU ARE A DOJO STUDENT...", style);
-console.log("%c" + "GOOD LUCK THIS IS A CHALLENGE!", style);
+console.log("%c" + "HI IF YOU ARE IN HERE...", style);
+console.log("%c" + "YOU MUST BE LOOKING FOR THE ANSWER", style);
+console.log("%c" + "ANSWER HERE ↓", style);
 // shows the dojo for debugging purposes
 console.table(theDojo);
 // adds the rows of buttons into <div id="the-dojo"></div> 
