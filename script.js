@@ -8,6 +8,16 @@ var theDojo = [ [1, 0, 1, 1, 1, 0, 4, 0, 8, 0],
                 [2, 2, 2, 2, 0, 7, 1, 1, 1, 0],
                 [5, 2, 0, 2, 0, 0, 0, 1, 1, 2],
                 [9, 2, 2, 2, 0, 7, 0, 1, 1, 0] ];
+var randomDojo = [ [1, 0, 1, 1, 1, 0, 4, 0, 8, 0],
+                [3, 1, 0, 7, 0, 0, 6, 0, 8, 8],
+                [5, 0, 7, 0, 3, 6, 6, 6, 0, 0],
+                [2, 3, 0, 9, 0, 0, 6, 0, 8, 0],
+                [6, 0, 3, 3, 0, 2, 0, 3, 0, 4],
+                [0, 0, 3, 3, 0, 0, 2, 2, 3, 0],
+                [0, 0, 0, 0, 5, 0, 1, 2, 0, 6],
+                [2, 2, 2, 2, 0, 7, 1, 1, 1, 0],
+                [5, 2, 0, 2, 0, 0, 0, 1, 1, 2],
+                [9, 2, 2, 2, 0, 7, 0, 1, 1, 0] ];
 
 var dojoDiv = document.querySelector("#the-dojo");
 let numOf0 = 0; //41
@@ -15,7 +25,7 @@ let numOf0 = 0; //41
 //GENERATE RANDOM MAP
 for(let x = 0; x < theDojo.length; x++) {
     for(let y = 0; y < theDojo[x].length; y++) {
-        theDojo[x][y] = Math.floor(Math.random() * 3);
+        randomDojo[x][y] = Math.floor(Math.random() * 10);
     }
 }
 
@@ -23,7 +33,7 @@ for(let x = 0; x < theDojo.length; x++) {
 // Creates the rows of buttons for this game
 function render(theDojo) {
     //ALERT RULES
-    alert('Rules: Each box contains a number from 0-2, Clicking on a box will return the sum of all neighboring boxes, Try to clear all 0s(mines) without touching any number greater than 0, ENJOY!');
+    alert('Rules: Each box contains a number from 0-9, Clicking on a box will return the sum of all neighboring boxes, Try to clear all 0s(mines) without touching any number greater than 0, ENJOY!');
 
     var result = "";
     for(var i=0; i<theDojo.length; i++) {
@@ -57,6 +67,7 @@ function howMany(i, j, element) {
     console.log( theDojo[i-1, j-1], theDojo[i-1, j] );
 
     numOf0--;
+    document.querySelector('#numOf0').innerText = numOf0;
     console.log('NUMBER OF 0S = ', numOf0);
     if(numOf0 == 0) {
         alert('WINNER! Well that was a waste of time...');
