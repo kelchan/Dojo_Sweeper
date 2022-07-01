@@ -23,8 +23,8 @@ for(let x = 0; x < theDojo.length; x++) {
 // Creates the rows of buttons for this game
 function render(theDojo) {
     //ALERT RULES
-    alert('Rules: each box contains a number from 0-2, Clicking on a box will return the sum of all neighboring boxes, Try to all 0s(mines) without touching any number greater than 0, ENJOY!');
-    
+    alert('Rules: Each box contains a number from 0-2, Clicking on a box will return the sum of all neighboring boxes, Try to clear all 0s(mines) without touching any number greater than 0, ENJOY!');
+
     var result = "";
     for(var i=0; i<theDojo.length; i++) {
         for(var j=0; j<theDojo[i].length; j++) {
