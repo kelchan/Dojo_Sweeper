@@ -28,9 +28,27 @@ function render(theDojo) {
 // verify if neighbors are within bounds
 // if neighbors are inbound add to sum
 // alert("TODO - determine how many ninjas are hiding in adjacent squares");
+let numOf0 = 41;
 function howMany(i, j, element) {
     console.log({i, j}, 'working...');
     console.log( theDojo[i-1, j-1], theDojo[i-1, j] );
+
+    // TO FIND NUMBER OF 0s
+    // for(let x = 0; x < theDojo.length; x++) {
+    //     console.log('test')
+    //     for(let y = 0; y < theDojo[x].length; y++) {
+    //         if(theDojo[x][y] == 0) {
+    //             numOf0++;
+    //         }
+    //     }
+    // }
+    numOf0--;
+    console.log('NUMBER OF 0S = ', numOf0);
+    if(numOf0 == 0) {
+        alert('WINNER! Well that was a waste of time...');
+    }
+
+
 
     if(theDojo[i][j] != 0) {
         dojoDiv.innerHTML = `<button onclick="location.reload()">restart</button>`;
